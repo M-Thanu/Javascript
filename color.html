@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Color</title>
+    <style>
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+            color:aquamarine;
+        }
+        #color{
+            display:flex;
+        }
+        #color > button{
+            margin:10px;
+            padding:20px;
+            font-size:30px;
+            border:2px solid black;
+        }
+        #green{
+            background-color: green;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #blue{
+            background-color: blue;
+        }
+
+
+    </style>
+
+    
+</head>
+<body>
+    <h1 id="head"> Pick One </h1>
+    <div id="color">
+        <button id="blue" onclick="colorch('blue')"> Blue </button>
+        <button id="green" onclick="colorch('green')"> Green </button>
+        <button id="yellow" onclick="colorch('yellow')"> Yellow </button>
+        <button id="random" onclick="colorran()"> Random </button>
+    </div>
+    <script>
+        const body = document.getElementsByTagName("body")[0];
+
+        function colorch(name){
+            body.style.backgroundColor=name;
+        }
+
+        function colorran(){
+            const r = Math.round(Math.random()*255);
+            const g = Math.round(Math.random()*255);
+            const b = Math.round(Math.random()*255);
+            const color=`rgb(${r}, ${g}, ${b})`;
+
+            body.style.backgroundColor = color;
+
+        }
+</script>
+</body>
+</html>

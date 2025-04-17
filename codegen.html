@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Code Generator</title>
+</head>
+<body>
+    <h1> Random Code Generator </h1>
+    <p id="code"></p>
+    <button id="but" onclick="generate()"> Generate </button>
+
+    <script>
+        function generate(){
+            let q1="Truth Shall Make You Free";
+            let q2="Burn Like Sun";
+            let q3="Listen to God";
+            let q4="Trust Yourself";
+
+            let choice;
+            choice=Math.floor(Math.random()*5);
+
+            switch(choice){
+                case 1:
+                    document.getElementById("code").innerHTML=q1;
+                    break;
+                case 2:
+                    document.getElementById("code").innerHTML=q2;
+                    break;
+                case 3:
+                    document.getElementById("code").innerHTML=q3;
+                    break;
+                case 4:
+                    document.getElementById("code").innerHTML=q4;
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <label for="name">User Name</label>
+            <input type="text" id="name" name="name" placeholder="FullName">
+            <p id="uname"></p> <br>
+
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd"> 
+            <p id="pass"></p><br>
+
+            <input type="submit" id="sbt" name="sbt" onclick="return subal()">
+        </fieldset>
+    </form>
+
+    <script>
+        
+        function subal(){
+            let user = document.getElementById("name").value;
+            let passw = document.getElementById("pwd").value;
+
+            document.getElementById("uname").innerHTML = "";
+            document.getElementById("pass").innerHTML = "";
+
+            if(user!="" && passw!=""){
+                alert("Submitted Successfully");
+                return true;
+            }
+            if(user==""){
+                document.getElementById("uname").innerHTML="Username is needed";
+            }
+            if(passw==""){
+                document.getElementById("pass").innerHTML="Password is needed";
+            }
+            return false;
+            
+        }
+
+    </script>
+</body>
+</html>

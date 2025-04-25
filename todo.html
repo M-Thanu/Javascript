@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TO DO LIST</h1>
+    <h4>Items</h4>
+    <p id="para"></p>
+    <input type="text" id="nit" name="item"> &nbsp;
+    <button id="but" onclick="additem()">ADD ITEM</button>
+
+    <script>
+        let text=document.getElementById("nit");
+        let add=document.getElementById("para");
+        function additem(){
+            document.getElementById("para").innerHTML="Drink";
+        }
+    </script>
+</body>
+</html>

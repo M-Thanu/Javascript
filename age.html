@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+</head>
+<body>
+    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age Calculator</h1>
+    <label for="year">Enter Birth Year : &nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="year" name="year"> <br><br>
+
+    <label for="month">Enter Birth Month : </label>
+    <input type="text" id="month" name="month"> <br><br>
+
+    <label for="day">Enter Birth Day : &nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="day" name="day"> <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button style="font-size: larger;" id="cal" onclick="agecal()"> &nbsp;Calculate&nbsp; </button>
+
+    <p id="result"></p>
+
+    <script>
+        function agecal(){
+            let byr = parseInt(document.getElementById("year").value);
+            let bmon = parseInt(document.getElementById("month").value);
+            let bd = parseInt(document.getElementById("day").value);
+
+            let cyr=2025;
+            let cmon=4;
+            let cd=27;
+
+            let fyr,fmon,fd;
+           
+            if(cd<bd){
+                cd=cd+30;
+                cmon=cmon-1;
+            }
+            fd=cd-bd;
+            if(cmon<bmon){
+                cmon=cmon+12;
+                cyr=cyr-1;
+            }
+            fmon=cmon-bmon;
+            fyr=cyr-byr;
+            document.getElementById("result").innerHTML="You are "+fyr+" years "+fmon+" months "+fd+" days old."
+        }
+    </script>
+</body>
+</html>

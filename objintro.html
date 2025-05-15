@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dog={
+            name:'Tommy',
+            breed:'dog',
+            bark : function(){
+                console.log("Woof! My name is "+this.name);
+            }
+        }
+
+        dog.bark();
+
+        let rectangle={
+            length : 10, 
+            width : 5,
+            area : function(){
+                return this.length * this.width;
+            },
+            perimeter : function(){
+                return 2*(this.length + this.width);
+            }
+        }
+        document.write("Area : "+rectangle.area()+"<br>");
+        document.write("Perimeter : "+rectangle.perimeter());
+
+        let car={
+            name:'Audi',
+            model:'BNMW',
+            year : 2004,
+            describe: function(){
+                document.write("<br> My car is a "+this.name+" "+this.model+" from "+this.year);
+            }
+        };
+        car.describe();
+
+        class Book{
+            constructor(title, author, year){
+                this.title=title;
+                this.author=author;
+                this.year=year;
+            }
+
+            display(){
+                document.write("<br> Book "+this.title+" by "+this.author+" is available from "+this.year);
+            }
+        }
+
+        let b1 = new Book('C basics','John',2004);
+        let b2= new Book('JS with OOP','Victoria',2010);
+
+        b1.display();
+        b2.display();
+    </script>
+</body>
+</html>

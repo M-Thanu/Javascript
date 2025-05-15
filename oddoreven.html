@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*let x=10;
+        numcheck(x);
+        function numcheck(a){
+            if(a % 2 == 0){
+                document.write('Even Number');
+            }else{
+                document.write('Odd Number');
+            }
+        }*/
+
+        
+        let n=parseInt(prompt("Enter Count"));
+        let total=0;
+
+        for(let i=1; i<=n; i++){
+            total=total+i;
+        }
+        document.write("Total is "+total);
+        
+
+        /*
+        let num=prompt("Enter number: ");
+        let mul=1;
+        let i=1;
+
+        while(i<=num){
+            mul=mul*i;
+            i++;
+        }
+        document.write("Factorial is: "+mul);
+        */
+
+        /*
+        let max=0;
+        let res;
+        const arr=[5,7,4,2,10];
+        res=maxnum(arr);
+
+        function maxnum(a){
+            for(let i=0; i<arr.length; i++){
+                if(arr[i]>max){
+                    max=arr[i];
+                }
+            }
+        }
+        document.write("Max: "+max);
+        */
+
+        /*
+        let count=0;
+        let word=prompt("Enter the word: ");
+
+        let i=0;
+        while(i<word.length){
+            if(word[i]=='a' || word[i]=='e' || word[i]=='i' || word[i]=='o' || word[i]=='u'){
+                count++;
+            }
+            i++;
+        }
+        document.write("Vowel Count: "+count);
+        */
+    </script>
+</body>
+
+</html>
